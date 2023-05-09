@@ -1,5 +1,5 @@
 body {
-    background-color: purple;
+    background-color: rgb(255, 255, 255);
     font-style: italic;
     font-family: fantasy
 }
@@ -8,13 +8,28 @@ body {
     border-style: solid;
     border-width: 1px;
 }
+#border1 {
+    border-color: red;
+    border-width: 4px;
+}
+#border2 {
+    border-color: orange;
+    border-width: 4px;
+}
+#border3 {
+    border-color:blueviolet;
+    border-width: 4px;
+}
 .list {
-    background-color: orange;
+    display: flex;
+    min-width: 5px;
+    justify-content: center;
 }
 
 .coolText {
-    color: azure;
-    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    justify-self: baseline
 }
 
 #mainText {
@@ -22,7 +37,50 @@ body {
     font-size: 60px;
     font-style: inherit;
 }
-
 img {
-    border: 4px solid crimson;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+#square {
+    height: 200px;
+    width:  200px;
+    background-color: blueviolet;
+    transition-duration: 2s;
+}
+#square:hover {
+    border-radius:  50%;
+    animation: colorChange;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: cyan;
+        width: 500px;
+    }
+    25% {
+        background-color: yellow;
+        width: 250px;
+    }
+    50% {
+        background-color: darkred;
+        width: 600px;
+    }
+    75% {
+        background-color: blue;
+        width: 300px;
+    }
+    100%{
+        background-color: limegreen;
+        width: 900px;
+    }
+}
+
+#b1 {
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
+    color: rgb(255, 254, 254);
 }
